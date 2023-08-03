@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: roboticsforall/website # Path to your Github/Gitlab repository
-  branch: master # Branch to update
+  branch: main # Branch to update
   base_url: http://cms.roboticsforall.net # Path to ext auth provider
   site_id: cms.netlify.com
 media_library:
