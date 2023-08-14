@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: test-repo
   repo: roboticsforall/website # Path to your Github/Gitlab repository
   branch: main # Branch to update
   base_url: http://cms.roboticsforall.net # Path to ext auth provider
@@ -516,25 +516,6 @@ collections:
                 name: agenda_file_path
                 widget: file
                 media_folder: "/public/uploads/downloads/meetingrecords"
-      - label: Newsletters
-        name: newsletters
-        file: src/posts/newsletters.json
-        fields:
-          - label: Newsletters
-            name: newsletters_list
-            widget: list
-            fields:
-              - {
-                  label: Date of Newsletter (Add month and year of newsletter. Ignore date),
-                  name: date,
-                  widget: date,
-                  default: "",
-                  format: "MMMM YYYY",
-                }
-              - label: file
-                name: file_path
-                widget: file
-                media_folder: "/public/uploads/newsletters"
       - label: Homepage Carousel Images
         name: homepage_carousel
         file: src/posts/homepage_carousel.json
@@ -543,4 +524,5 @@ collections:
             name: homepage_carousel_images_list
             widget: list
             fields:
-              - { label: Image, name: image, widget: image }
+              - { label: Image, name: image, widget: image, required: true }
+              - { label: alt, name: alt, widget: string, required: true }
