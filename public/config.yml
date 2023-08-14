@@ -20,6 +20,7 @@ collections:
           - label: General Website Updates
             name: updates
             widget: string
+            required: false
       - label: Logistical Information
         name: org_logistics
         file: src/posts/org_logistics.json
@@ -524,5 +525,5 @@ collections:
             name: homepage_carousel_images_list
             widget: list
             fields:
-              - { label: Image, name: image, widget: image, required: true }
-              - { label: alt, name: alt, widget: string, required: true }
+              - { label: Image, name: image, widget: image }
+              - { label: alt, name: alt, widget: string }
