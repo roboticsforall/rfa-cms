@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: test-repo
   repo: roboticsforall/website # Path to your Github/Gitlab repository
   branch: main # Branch to update
   base_url: http://cms.roboticsforall.net # Path to ext auth provider
@@ -62,6 +62,7 @@ collections:
                   widget: image,
                   media_folder: /public/uploads/coursesimg,
                 }
+              - { label: alt, name: alt, widget: string }
               - {
                   label: Brief Course Description,
                   name: course_description,
@@ -83,6 +84,7 @@ collections:
                   widget: image,
                   media_folder: /public/uploads/coursesimg,
                 }
+              - { label: alt, name: alt, widget: string }
               - {
                   label: Brief Course Description,
                   name: course_description,
@@ -112,6 +114,7 @@ collections:
                   widget: image,
                   media_folder: /public/uploads/flagimg,
                 }
+              - { label: alt, name: alt, widget: string }
       - label: Google Drive Links to Enrollment Signup Document
         name: enrollment_form_document_link
         file: src/posts/enrollment_form_document_link.json
