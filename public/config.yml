@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: roboticsforall/website # Path to your Github/Gitlab repository
-  branch: main # Branch to update
+  branch: 130-design-protoype-the-two-meet-the-team-page-designs # Branch to update
   base_url: http://cms.roboticsforall.net # Path to ext auth provider
   site_id: cms.netlify.com
 media_library:
@@ -366,93 +366,39 @@ collections:
             fields:
               - { label: Question, name: header, widget: string }
               - { label: Answer, name: description, widget: markdown }
-  - label: Leadership Team Info # used in UI
-    name: leadership_team_info # used in routes
+  - label: Leadership Team
+    name: leadership_team
     files:
-      - label: Board Members
-        name: board_members
-        file: src/posts/board_members.json
+      - label: Leadership Team Info
+        name: leadership_team_info
+        file: src/posts/leadership_team.json
         fields:
-          - label: Board Members List
-            name: board_members_list
+          - label: Leadership Team Member
+            name: leadership_team_list
             widget: list
             fields:
               - label: Name
                 name: name
                 widget: string
-              - label: Title/Pronouns
-                name: title_pronouns
+              - label: Title
+                name: title
                 widget: string
-              - label: Description
-                name: description
-                widget: markdown
+              - label: Respective Team
+                name: team
+                multiple: true
+                widget: select
+                options:
+                  - { label: "Board of Directors", value: "board_of_directors" }
+                  - { label: "Executive Team", value: "executive_team" }
+                  - { label: "Other Leadership", value: "other_leadership" }
+              - label: Preferred Pronouns
+                name: pronouns
               - label: Image
                 name: image
                 widget: image
-                media_folder: "/public/uploads/leadershipteamimg/boardmembers"
-      - label: Assistant Directors
-        name: assistant_directors
-        file: src/posts/assistant_directors.json
-        fields:
-          - label: Assistant Directors List
-            name: assistant_directors_list
-            widget: list
-            fields:
-              - label: Name
-                name: name
-                widget: string
-              - label: Title/Pronouns
-                name: title_pronouns
-                widget: string
               - label: Description
                 name: description
                 widget: markdown
-              - label: Image
-                name: image
-                widget: image
-                media_folder: "/public/uploads/leadershipteamimg/assistantdirectors"
-      - label: Curriculum Committee
-        name: curriculum_committee
-        file: src/posts/curriculum_committee.json
-        fields:
-          - label: Curriculum Committee List
-            name: curriculum_committee_list
-            widget: list
-            fields:
-              - label: Name
-                name: name
-                widget: string
-              - label: Title/Pronouns
-                name: title_pronouns
-                widget: string
-              - label: Description
-                name: description
-                widget: markdown
-              - label: Image
-                name: image
-                widget: image
-                media_folder: "/public/uploads/leadershipteamimg/curriculumcommittee"
-      - label: Publicity Committee
-        name: pub_committee
-        file: src/posts/pub_committee.json
-        fields:
-          - label: Publicity Committee List
-            name: pub_committee
-            widget: list
-            fields:
-              - label: Name
-                name: name
-                widget: string
-              - label: Title/Pronouns
-                name: title_pronouns
-                widget: string
-              - label: Description
-                name: description
-                widget: markdown
-              - label: Image
-                name: image
-                widget: image
-                media_folder: "/public/uploads/leadershipteamimg/pubcommittee"
   - label: Other # Collection 1
     name: other
     files:
