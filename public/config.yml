@@ -3,7 +3,6 @@ backend:
   repo: roboticsforall/website # Path to your Github/Gitlab repository
   branch: main # Branch to update
   base_url: http://cms.roboticsforall.net # Path to ext auth provider
-  site_id: cms.netlify.com
 media_library:
   name: uploadcare
   config:
